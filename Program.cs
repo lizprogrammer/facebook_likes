@@ -1,27 +1,89 @@
 using System;
-﻿
-﻿   //  1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
-    // If no one likes your post, it doesn't display anything.  
-    // If only one person likes your post, it displays: [Friend's Name] likes your post.
-    // If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
-    // If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
-    // Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+using System.Collections.Generic;
 
-namespace arrays
+public class Person
 {
-    class Program
+    // Constructor that takes no arguments:
+    public Person()
     {
-        static void Main(string[] args)
+        Name = "unknown";
+    }
+
+    // Constructor that takes one argument:
+    public Person(string name)
+    {
+        Name = name;
+    }
+
+    // Auto-implemented readonly property:
+    public string Name { get; }
+
+    // Method that overrides the base class (System.Object) implementation.
+    public override string ToString()
+    {
+        return Name;
+    }
+}
+class TestPerson
+{
+    static void Main()
+    {
+        // Call the constructor that has no parameters.
+        
+        List<Person> MyLikes = new List<Person>();
+        
+        while(true)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Enter a name: ");    
+            var name = Console.ReadLine();
+            if((name == "end") || (name == ""))
+                break;
+            var liker = new Person(name);
+            // Console.WriteLine(person2.Name);
+            MyLikes.Add(liker);
         }
         
-
-    }
-        public class FacebookPost()
+        if(MyLikes.Count == 1)
         {
-            string friends = "";
-            likes = 0;
-            
+            Console.WriteLine(String.Format("You have {0} like!", MyLikes.Count));
         }
+        else if ((MyLikes.Count == 2)||(MyLikes.Count ==3))
+        {
+            Console.WriteLine(String.Format("You have {0} likes!", MyLikes.Count));
+        }
+        
+  
+        // Get the string representation of the person2 instance.
+        // Console.WriteLine(person2);
+        
+            int more = MyLikes.Count - 2;
+        
+            if(MyLikes.Count == 0)
+                Console.Write("You have no likes");
+            // One like
+            else if(MyLikes.Count == 1)
+            {
+                Console.Write(String.Format("{0} likes your post", MyLikes[0]));
+            }
+            // Two likes
+            else if(MyLikes.Count == 2)
+            {
+                Console.Write(String.Format("{0} and {1} like your post", MyLikes[0], MyLikes[1]));
+            }
+            // More than two
+            else
+            {
+                Console.Write(String.Format("{0}, {1} and {2} more like your post", MyLikes[0], MyLikes[1], more));
+            }
+            
+            // Three likes
+            
+            // Greater than three likes
+            
+        
+    
+
+        Console.WriteLine("\nPress any key to exit...");
+        Console.ReadKey();
+    }
 }
