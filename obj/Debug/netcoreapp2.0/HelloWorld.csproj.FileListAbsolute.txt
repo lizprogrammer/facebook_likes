@@ -1,0 +1,9 @@
+/home/ubuntu/workspace/HelloWorld/bin/Debug/netcoreapp2.0/HelloWorld.deps.json
+/home/ubuntu/workspace/HelloWorld/bin/Debug/netcoreapp2.0/HelloWorld.runtimeconfig.json
+/home/ubuntu/workspace/HelloWorld/bin/Debug/netcoreapp2.0/HelloWorld.runtimeconfig.dev.json
+/home/ubuntu/workspace/HelloWorld/bin/Debug/netcoreapp2.0/HelloWorld.dll
+/home/ubuntu/workspace/HelloWorld/bin/Debug/netcoreapp2.0/HelloWorld.pdb
+/home/ubuntu/workspace/HelloWorld/obj/Debug/netcoreapp2.0/HelloWorld.csproj.CoreCompileInputs.cache
+/home/ubuntu/workspace/HelloWorld/obj/Debug/netcoreapp2.0/HelloWorld.AssemblyInfo.cs
+/home/ubuntu/workspace/HelloWorld/obj/Debug/netcoreapp2.0/HelloWorld.dll
+/home/ubuntu/workspace/HelloWorld/obj/Debug/netcoreapp2.0/HelloWorld.pdb
